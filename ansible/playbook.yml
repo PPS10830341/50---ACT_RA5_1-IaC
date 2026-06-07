@@ -1,0 +1,21 @@
+- hosts: web
+  become: yes
+  tasks:
+    - name: Instalar paquetes base
+      apt:
+        name:
+          - apache2
+          - prometheus
+          - grafana-server
+        update_cache: yes
+
+    - name: Arrancar servicios
+      service:
+        name: "{{ item }}"
+        state: started
+        enabled: yes
+      loop:
+        - apache2
+        - prometheus
+        - grafana-server
+
