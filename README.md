@@ -24,3 +24,7 @@ En la pantalla que se abre, baja hasta el final del todo hasta la sección llama
 -  Haz clic en **"Save"**.
 
 Volverás a la pantalla principal de tu tarea. En el menú de la izquierda, haz clic en el botón que dice **"Build Now"**. Verás que abajo a la izquierda aparece un historial con el **#1**. Haz clic sobre ese número y luego en **"Console Output"** para ver en tiempo real cómo trabaja.
+
+![](./Imagenes/1.png)
+![](./Imagenes/2.png)
+![](./Imagenes/3.png)
