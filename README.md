@@ -6,6 +6,6 @@
 
 2. `docker build -t ansible-custom -f Dockerfile.ansible .`
 
-3. `docker compose up -d`
+3. `docker-compose up -d`
 
 Cuando termine de cargar, abre tu navegador web e ingresa a: http://localhost:8080
