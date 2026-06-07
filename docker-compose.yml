@@ -9,10 +9,22 @@ services:
       - "50000:50000"
     volumes:
       - jenkins_home:/var/jenkins_home
-      - /var/run/docker.sock:/var/run/docker.sock # Comparte el motor de Docker
-      - /usr/bin/docker:/usr/bin/docker           # Comparte el programa Docker de tu PC
+      - .:/workspace
     privileged: true
 
-volumes:
-  jenkins_home:
+  terraform:
+    image: hashicorp/terraform:latest
+    container_name: terraform_service
+    volumes:
+      - ./terraform:/app
+    working_dir: /app
+    entrypoint: ["terraform"]
+
+  ansible:
+    image: ubuntu:22.04
+    container_name: ansible_service
+    volumes:
+      - ./ansible:/ansible
+    working_dir: /ansible
+    command: tail -f /dev/null
 
